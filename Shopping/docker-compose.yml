@@ -1,0 +1,21 @@
+services: 
+  shopping.api:
+    container_name: shoppingapi
+    image: shopping.api
+    build:
+      context: .
+      dockerfile: Shopping.API/Dockerfile
+    ports:
+      - 5001:80
+  shopping.client:
+    container_name: shoppingclient
+    image: shopping.client
+    build:
+      context: .
+      dockerfile: Shopping.Client/Dockerfile
+    environment:
+      - ShoppingAPIUrl=http://shoppingapi
+    depends_on: 
+      - shopping.api
+    ports:
+      - 5000:80

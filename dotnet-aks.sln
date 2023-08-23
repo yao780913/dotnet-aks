@@ -7,6 +7,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{D6C9CD76-FAC6-4691-B33B-323F33BF10C8}"
 	ProjectSection(SolutionItems) = preProject
 		readme.md = readme.md
+		Shopping\docker-compose.yml = Shopping\docker-compose.yml
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopping.Domain", "Shopping\Shopping.Domain\Shopping.Domain.csproj", "{6524D396-77E7-4EC4-86E8-3883755E4306}"
