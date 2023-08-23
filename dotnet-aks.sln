@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopping.Client", "Shopping.Client\Shopping.Client.csproj", "{BEDDC2DF-71AF-453D-B52D-685D3D8DC0A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopping.API", "Shopping.API\Shopping.API.csproj", "{6A591EE5-E184-4141-B1D9-F0768B721718}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{BEDDC2DF-71AF-453D-B52D-685D3D8DC0A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEDDC2DF-71AF-453D-B52D-685D3D8DC0A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEDDC2DF-71AF-453D-B52D-685D3D8DC0A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A591EE5-E184-4141-B1D9-F0768B721718}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A591EE5-E184-4141-B1D9-F0768B721718}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A591EE5-E184-4141-B1D9-F0768B721718}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A591EE5-E184-4141-B1D9-F0768B721718}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
