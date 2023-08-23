@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopping.Client", "Shopping.Client\Shopping.Client.csproj", "{BEDDC2DF-71AF-453D-B52D-685D3D8DC0A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopping.Client", "Shopping\Shopping.Client\Shopping.Client.csproj", "{BEDDC2DF-71AF-453D-B52D-685D3D8DC0A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopping.API", "Shopping.API\Shopping.API.csproj", "{6A591EE5-E184-4141-B1D9-F0768B721718}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopping.API", "Shopping\Shopping.API\Shopping.API.csproj", "{6A591EE5-E184-4141-B1D9-F0768B721718}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{D6C9CD76-FAC6-4691-B33B-323F33BF10C8}"
 	ProjectSection(SolutionItems) = preProject
 		readme.md = readme.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopping.Domain", "Shopping.Domain\Shopping.Domain.csproj", "{6524D396-77E7-4EC4-86E8-3883755E4306}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopping.Domain", "Shopping\Shopping.Domain\Shopping.Domain.csproj", "{6524D396-77E7-4EC4-86E8-3883755E4306}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
