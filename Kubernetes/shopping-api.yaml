@@ -1,0 +1,37 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shopping-api-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shopping-api 
+  template:
+    metadata:
+      labels:
+        app: shopping-api
+    spec:
+      containers:
+        - name: shopping-api
+          image: billyao78/shopping.api:latest
+          imagePullPolicy: Always
+          env:
+            - name: ConnStr
+              valueFrom:
+                configMapKeyRef:
+                  name: env
+                  key: ConnStr
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: shopping-api-service
+spec:
+  selector:
+    app: shopping-api
+  ports:
+    - protocol: TCP
+      port: 5001
+      targetPort: 80
+  type: LoadBalancer

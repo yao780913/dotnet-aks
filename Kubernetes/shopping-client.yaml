@@ -1,0 +1,37 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shopping-client-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: shopping-client
+  template:
+    metadata:
+      labels:
+        app: shopping-client
+    spec:
+      containers:
+        - name: shopping-client
+          image: billyao78/shopping.client:latest
+          imagePullPolicy: Always
+          env:
+            - name: ShoppingAPIUrl
+              valueFrom:
+                configMapKeyRef:
+                  name: env
+                  key: ShoppingAPIUrl
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: shopping-client-service
+spec:
+  selector:
+    app: shopping-client
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 80
+  type: LoadBalancer

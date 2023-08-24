@@ -1,0 +1,9 @@
+﻿apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env
+data:
+  POSTGRES_USER: 'postgres'
+  POSTGRES_PASSWORD: 'postgres'
+  ConnStr: 'host=postgres-db-service.default;database=shopping;username=postgres;password=postgres;'
+  ShoppingAPIUrl: 'http://shopping-api-service.default:5001'
