@@ -32,7 +32,7 @@ services:
       context: .
       dockerfile: Shopping.Client/Dockerfile
     environment:
-      - ShoppingAPIUrl=http://shoppingapi
+      - ShoppingAPIUrl=http://shopping.api
     depends_on: 
       - shopping.api
     ports:

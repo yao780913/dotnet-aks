@@ -9,14 +9,7 @@ namespace Shopping.API.Controllers;
 [Route("[controller]")]
 public class ProductController : ControllerBase
 {
-    private readonly AppDbContext _db;
-    public ProductController (AppDbContext db)
-    {
-        _db = db;
-    }
-
     [HttpGet]
-    [Route("ByBogus")]
     public IActionResult Get ()
     {
         var faker = new Faker<Product>()
@@ -30,12 +23,4 @@ public class ProductController : ControllerBase
         return Ok(
             faker.Generate(10));
     }
-
-    [HttpGet]
-    [Route("ByDb")]
-    public IActionResult Get2 ()
-    {
-        return Ok(_db.Products.ToList());
-    }
-    
 }

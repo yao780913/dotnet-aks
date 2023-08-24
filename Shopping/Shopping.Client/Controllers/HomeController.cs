@@ -28,6 +28,18 @@ public class HomeController : Controller
 
         return View(products);
     }
+    
+    public async Task<IActionResult> Index2 ()
+    {
+        var response = await _httpClient.GetAsync("/product2");
+        response.EnsureSuccessStatusCode();
+
+        var content = await response.Content.ReadAsStringAsync();
+        var products = JsonSerializer.Deserialize<IEnumerable<Product>>(content,
+            new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+
+        return View(products);
+    }
 
     public IActionResult Privacy ()
     {
