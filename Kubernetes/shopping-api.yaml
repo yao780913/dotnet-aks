@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: shopping-api
-          image: billyao78/shopping.api:latest
+          image: billyao78/shopping-api:latest
           imagePullPolicy: Always
           env:
             - name: ConnStr

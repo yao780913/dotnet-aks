@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: shopping-client
-          image: billyao78/shopping.client:latest
+          image: billyao78/shopping-client:latest
           imagePullPolicy: Always
           env:
             - name: ShoppingAPIUrl

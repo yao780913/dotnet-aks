@@ -13,9 +13,9 @@ services:
       - 8080:8080
     depends_on:
       - postgres-db
-  shopping.api:
-    container_name: shopping.api
-    image: shopping.api
+  shopping-api:
+    container_name: shopping-api
+    image: shopping-api
     environment:
       ConnStr: host=postgres-db;database=shopping;username=postgres;password=postgres;
     build:
@@ -25,16 +25,16 @@ services:
       - 5001:80
     depends_on:
       - postgres-db
-  shopping.client:
-    container_name: shopping.client
-    image: shopping.client
+  shopping-client:
+    container_name: shopping-client
+    image: shopping-client
     build:
       context: .
       dockerfile: Shopping.Client/Dockerfile
     environment:
-      - ShoppingAPIUrl=http://shopping.api
+      - ShoppingAPIUrl=http://shopping-api
     depends_on: 
-      - shopping.api
+      - shopping-api
     ports:
       - 5000:80
 volumes: 
